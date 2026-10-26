@@ -60,18 +60,18 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-6 text-white/90">
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-white/90 [&>.divider]:hidden sm:[&>.divider]:block">
             <div className="flex items-center gap-2">
               <Stars className="text-xl" />
               <span className="font-bold">4.8</span>
               <span className="text-sm text-white/60">Google</span>
             </div>
-            <div className="h-6 w-px bg-white/30" />
+            <div className="divider h-6 w-px bg-white/30" />
             <div className="flex items-center gap-2">
               <span className="font-bold">4.7★</span>
               <span className="text-sm text-white/60">DoorDash (50+ ratings)</span>
             </div>
-            <div className="h-6 w-px bg-white/30" />
+            <div className="divider h-6 w-px bg-white/30" />
             <div className="text-sm">
               📍 {BIZ.address}, {BIZ.city}
             </div>
@@ -79,26 +79,26 @@ export default function Hero() {
         </div>
 
         {/* Floating food polaroids */}
-        <div className="relative hidden h-[520px] lg:block">
+        <div className="relative mx-auto h-[360px] w-full max-w-sm sm:h-[460px] sm:max-w-md lg:h-[520px] lg:max-w-none">
           <figure
-            className="animate-floaty absolute top-0 right-6 w-72 rotate-6 rounded-2xl bg-white p-3 pb-10 shadow-2xl"
+            className="animate-floaty absolute top-0 right-2 w-48 rotate-6 rounded-2xl bg-white p-2 pb-8 shadow-2xl sm:right-6 sm:w-64 sm:p-3 sm:pb-10 lg:w-72"
             style={{ ["--r" as string]: "6deg" }}
           >
-            <img src="images/bandeja-paisa.jpg" alt="Bandeja Paisa" className="h-60 w-full rounded-lg object-cover" />
-            <figcaption className="font-script absolute bottom-2 left-0 w-full text-center text-xl text-col-red">
+            <img src="images/bandeja-paisa.jpg" alt="Bandeja Paisa" className="h-40 w-full rounded-lg object-cover sm:h-52 lg:h-60" />
+            <figcaption className="font-script absolute bottom-1.5 left-0 w-full text-center text-lg text-col-red sm:bottom-2 sm:text-xl">
               Bandeja Paisa
             </figcaption>
           </figure>
           <figure
-            className="animate-floaty absolute bottom-0 left-0 w-64 rounded-2xl bg-white p-3 pb-10 shadow-2xl"
+            className="animate-floaty absolute bottom-0 left-2 w-44 rounded-2xl bg-white p-2 pb-8 shadow-2xl sm:left-0 sm:w-56 sm:p-3 sm:pb-10 lg:w-64"
             style={{ ["--r" as string]: "-7deg", animationDelay: "1.5s" }}
           >
-            <img src="images/salchipapa.jpg" alt="Salchipapa" className="h-52 w-full rounded-lg object-cover" />
-            <figcaption className="font-script absolute bottom-2 left-0 w-full text-center text-xl text-col-blue">
+            <img src="images/salchipapa.jpg" alt="Salchipapa" className="h-36 w-full rounded-lg object-cover sm:h-48 lg:h-52" />
+            <figcaption className="font-script absolute bottom-1.5 left-0 w-full text-center text-lg text-col-blue sm:bottom-2 sm:text-xl">
               Salchipapa
             </figcaption>
           </figure>
-          <div className="absolute top-1/2 left-1/3 flex h-28 w-28 -translate-y-1/2 rotate-12 items-center justify-center rounded-full bg-col-red text-center font-display text-lg leading-tight text-white uppercase shadow-xl ring-4 ring-col-yellow">
+          <div className="absolute top-1/2 left-1/3 flex h-20 w-20 -translate-y-1/2 rotate-12 items-center justify-center rounded-full bg-col-red text-center font-display text-sm leading-tight text-white uppercase shadow-xl ring-4 ring-col-yellow sm:h-28 sm:w-28 sm:text-lg">
             Since
             <br />
             June 2024

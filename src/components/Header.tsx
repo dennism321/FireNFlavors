@@ -28,14 +28,16 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Announcement bar */}
       <div className="bg-char text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 py-1.5 text-xs font-medium md:text-sm">
-          <ColombiaFlag className="h-3.5 w-5 shadow-none" />
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-3 py-1.5 text-[11px] font-medium sm:gap-3 sm:px-4 sm:text-xs md:text-sm">
+          <ColombiaFlag className="h-3.5 w-5 shrink-0 shadow-none" />
           <span className="truncate">
-            ¡Bienvenidos! Open Mon & Wed–Sun · Closed Tuesdays ·{" "}
-            <a href={BIZ.phoneHref} className="text-col-yellow underline-offset-2 hover:underline">
-              {BIZ.phone}
-            </a>
+            <span className="hidden sm:inline">¡Bienvenidos! </span>Open Mon & Wed–Sun · Closed Tue
+            <span className="hidden sm:inline">sdays</span>
           </span>
+          <span className="shrink-0">·</span>
+          <a href={BIZ.phoneHref} className="shrink-0 whitespace-nowrap text-col-yellow underline-offset-2 hover:underline">
+            {BIZ.phone}
+          </a>
           <ColombiaFlag className="hidden h-3.5 w-5 shadow-none sm:block" />
         </div>
         <div className="flag-stripe h-1" />

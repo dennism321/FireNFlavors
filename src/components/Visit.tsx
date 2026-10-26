@@ -177,7 +177,7 @@ export function Footer() {
           <p className="mt-3 text-sm text-white/60">Mon & Wed–Sun · Closed Tue</p>
         </div>
       </div>
-      <div className="border-t border-white/10 py-6 text-center text-sm text-white/50">
+      <div className="border-t border-white/10 px-4 pt-6 pb-24 text-center text-sm text-white/50 sm:pb-6">
         © {new Date().getFullYear()} Fire & Flavors · Colombian Fast Food · Hamden, CT · Hecho con ❤️ y 🔥
       </div>
     </footer>

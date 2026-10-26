@@ -51,15 +51,15 @@ export function Intro() {
             ingredients and a homemade touch that shines through in every bite. Big portions,
             honest prices ({BIZ.priceRange}) and a whole lot of sabor.
           </p>
-          <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+          <div className="mt-8 grid grid-cols-3 gap-3 text-center sm:gap-4">
             {[
               ["4.8★", "Google Rating"],
               ["40+", "Menu Items"],
               ["100%", "Latin Ingredients"],
             ].map(([n, l]) => (
-              <div key={l} className="rounded-2xl border-2 border-char bg-white p-4 shadow-[5px_5px_0_#140c08]">
-                <div className="font-display text-3xl text-col-red md:text-4xl">{n}</div>
-                <div className="text-xs font-semibold tracking-wider text-char/70 uppercase">{l}</div>
+              <div key={l} className="rounded-2xl border-2 border-char bg-white px-2 py-4 shadow-[5px_5px_0_#140c08] sm:p-4">
+                <div className="font-display text-[1.6rem] text-col-red min-[360px]:text-3xl md:text-4xl">{n}</div>
+                <div className="text-[10px] font-semibold tracking-wide text-char/70 uppercase sm:text-xs sm:tracking-wider">{l}</div>
               </div>
             ))}
           </div>
