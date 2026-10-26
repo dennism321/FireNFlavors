@@ -179,6 +179,15 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 px-4 pt-6 pb-24 text-center text-sm text-white/50 sm:pb-6">
         © {new Date().getFullYear()} Fire & Flavors · Colombian Fast Food · Hamden, CT · Hecho con ❤️ y 🔥
+        <a
+          href="https://techathos.com"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 flex items-center justify-center gap-2 text-xs text-white/50 transition hover:text-white"
+        >
+          <img src="images/techathos-logo.png" alt="" className="h-6 w-6 rounded" />
+          Website by <span className="font-semibold tracking-wider">TECHATHOS</span>
+        </a>
       </div>
     </footer>
   );

@@ -42,6 +42,18 @@ export default function App() {
       >
         🔥 Order Now
       </a>
+
+      {/* TechAthos watermark */}
+      <a
+        href="https://techathos.com"
+        target="_blank"
+        rel="noreferrer"
+        title="Website by TechAthos"
+        aria-label="Website by TechAthos"
+        className="fixed bottom-4 left-4 z-40 block h-14 w-14 overflow-hidden rounded-xl opacity-60 shadow-lg ring-1 ring-white/20 transition hover:opacity-100 sm:h-16 sm:w-16"
+      >
+        <img src="images/techathos-logo.png" alt="TechAthos" className="h-full w-full" />
+      </a>
     </div>
   );
 }
