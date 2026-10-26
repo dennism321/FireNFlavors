@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", Impact, sans-serif;
+  --font-script: "Pacifico", cursive;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-col-yellow: #fcd116;
+  --color-col-blue: #003893;
+  --color-col-red: #ce1126;
+  --color-fire: #ff5a1f;
+  --color-ember: #ff8a00;
+  --color-char: #140c08;
+  --color-cream: #fff6e5;
+  --color-fiesta: #e6007e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-char);
+}
+
+/* Colombian flag stripe (3 parts: yellow 50%, blue 25%, red 25%) */
+.flag-stripe {
+  background: linear-gradient(
+    to right,
+    var(--color-col-yellow) 0 50%,
+    var(--color-col-blue) 50% 75%,
+    var(--color-col-red) 75% 100%
+  );
+}
+.flag-stripe-v {
+  background: linear-gradient(
+    to bottom,
+    var(--color-col-yellow) 0 50%,
+    var(--color-col-blue) 50% 75%,
+    var(--color-col-red) 75% 100%
+  );
+}
+
+/* Map / dotted texture like the reference site */
+.texture-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+.texture-dots-light {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Papel picado / mural style zig-zag edge */
+.zigzag-bottom {
+  --s: 22px;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / var(--s) 100%;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px currentColor;
+  color: transparent;
+}
+
+.fire-text {
+  background: linear-gradient(180deg, #fcd116 0%, #ff8a00 45%, #ce1126 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: perspective(400px) rotateY(0deg) skewY(0deg); }
+  25% { transform: perspective(400px) rotateY(8deg) skewY(-2deg); }
+  75% { transform: perspective(400px) rotateY(-8deg) skewY(2deg); }
+}
+.animate-wave {
+  animation: wave 4s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: scale(1) rotate(-2deg); filter: drop-shadow(0 0 6px #ff8a00); }
+  50% { transform: scale(1.08) rotate(2deg); filter: drop-shadow(0 0 14px #ff5a1f); }
+}
+.animate-flicker {
+  animation: flicker 1.6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-12px) rotate(var(--r, 0deg)); }
+}
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
