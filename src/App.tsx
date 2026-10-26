@@ -43,17 +43,17 @@ export default function App() {
         🔥 Order Now
       </a>
 
-      {/* TechAthos watermark */}
-      <a
-        href="https://techathos.com"
-        target="_blank"
-        rel="noreferrer"
-        title="Website by TechAthos"
-        aria-label="Website by TechAthos"
-        className="fixed bottom-4 left-4 z-40 block h-14 w-14 overflow-hidden rounded-xl opacity-60 shadow-lg ring-1 ring-white/20 transition hover:opacity-100 sm:h-16 sm:w-16"
+      {/* TechAthos watermark: large faded logo across the whole site; clicks pass through */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-30 flex items-center justify-center select-none"
       >
-        <img src="images/techathos-logo.png" alt="TechAthos" className="h-full w-full" />
-      </a>
+        <img
+          src="images/techathos-watermark.svg"
+          alt=""
+          className="w-[85vw] max-w-[720px] opacity-[0.14]"
+        />
+      </div>
     </div>
   );
 }
